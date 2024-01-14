@@ -1,9 +1,19 @@
 package kit.org;
 
+import kit.org.model.Bot;
 import kit.org.repository.QuotesRepository;
+import kit.org.utils.Generate;
+import org.telegram.telegrambots.meta.TelegramBotsApi;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 public class Application {
     public static void main(String[] args) {
-        System.out.println(QuotesRepository.show());
+        try {
+            TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
+            botsApi.registerBot(new Bot());
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
     }
 }
