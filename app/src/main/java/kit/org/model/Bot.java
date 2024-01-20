@@ -11,8 +11,8 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 @Getter
 public class Bot extends TelegramLongPollingBot {
-    private static final String BOT_TOKEN = "6057691657:AAEbCyRHeJalZ9VynFCRAiP5q0Lh2HLKKSM"; //Generate.getBotInfo(0);
-    private static final String BOT_NAME = "Dimsi_34_bot";//Generate.getBotInfo(1);
+    private static final String BOT_TOKEN = Generate.getBotInfo(0);
+    private static final String BOT_NAME = Generate.getBotInfo(1);
     @Override
     public void onUpdateReceived(Update update) {
         try{
