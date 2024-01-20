@@ -1,0 +1,2 @@
+token=6057691657:AAEbCyRHeJalZ9VynFCRAiP5q0Lh2HLKKSM
+bot_name=Dimsi_34_bot
